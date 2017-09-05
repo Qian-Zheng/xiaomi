@@ -1,0 +1,1180 @@
+/*顶端通栏*/
+#topBanner{
+    background-color: #000;
+    height: 40px;
+    >div {
+        >ul:first-of-type {
+            line-height: 40px;
+            >li {
+                float: left;
+                color: #b0b0b0;
+                &:nth-child(even){
+                    margin-left: 7px;
+                    margin-right: 10px;
+                }
+                >a {
+                    color: #b0b0b0;
+                }
+                &:hover{
+                    >a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        >ul:last-of-type {
+             line-height: 40px;
+            >li {
+                float: right;
+                &:first-of-type {
+                    width: 120px;
+                    line-height: 40px;
+                    text-align: center;
+                    position: relative;
+                    >a {
+                         color: #b0b0b0;
+                         >i {
+                              font-size: 16px;
+                         }
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        >a {
+                            color: #FF6700;
+                        }
+                    }
+                    >div {
+                        width: 316px;
+                        line-height: 97px;
+                        border: 1px solid #ccc;
+                        position: absolute;
+                        right: 0;
+                        background-color: #fff;
+                        box-shadow: 0 0 5px #ccc;
+                        display: none;
+                        z-index: 999;
+                    }
+                }
+                &:last-of-type {
+                    margin-right: 20px;
+                    >ul {
+                        >li {
+                            float: left;
+                            &:nth-child(2){
+                                font-weight: 800;
+                                margin-left: 3px;
+                                margin-right: 3px;
+                            }
+                            >a {
+                                color: #b0b0b0;
+                            }
+                            &:hover {
+                                >a {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*导航栏*/
+#nav {
+    height: 100px;
+    >div {
+        line-height: 100px;
+        position: relative;
+        .log {
+            float: left;
+        }
+        .navs{            
+            float: left;
+            // position: relative;
+            .navTemplate {
+                >li {
+                    float: left;
+                    margin-right: 20px;
+                    height: 100%;
+                    >a {
+                        display: block;
+                        font-size: 16px;
+                        height: 100%;
+                    }
+                    &:hover {
+                        >a {
+                            color: #FF6700; 
+                        }
+                    }
+                }
+            }
+        }
+     .Search {
+        position: absolute;
+        right: 0;
+        >input {
+            width: 240px;
+            height: 50px;
+            border: 1px solid #ccc;
+            margin-right: -5px;
+        }
+        >i {
+            display: inline-block;
+            width: 50px;
+            height: 50px;   
+            line-height: 50px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            position: relative;
+            top: 3px;
+            cursor: pointer;
+            &:hover {
+                background-color: #FF6700;
+                color: #fff;
+            }
+        }
+        >ul {
+            position: absolute;
+            top: 42px;
+            left: 87px;
+            >li {      
+                float: left;  
+                background-color: #eeeeee;
+                color: #a38493;  
+                line-height: 18px;
+                font-size: 12px;
+                margin-right: 5px; 
+                text-align: center;     
+                &:first-of-type {
+                    width: 52px;                   
+                    // top: 0px;
+                }
+                &:last-of-type {
+                    width: 84px;
+                }
+                &:hover {
+                    background-color: #FF6700;
+                    color: #fff;
+                }
+            }
+        }
+    }
+        
+    }
+   
+    .navDown {
+            height: 232px;
+            width: 100%;
+            border-top: 1px solid #ccc;
+            box-shadow: 0 2px 3px #ccc;
+            position: absolute;
+            top: 140px;
+            float: left;
+            display: none;
+            background-color: #fff;
+            z-index: 999;
+            >ul {
+               margin-left: 220px;
+               width: 1000%;
+                >li {
+                    margin-top: 30px;
+                    width: 220px;
+                    border-right: 1px solid #ccc;
+                    float: left;
+                    text-align: center;
+                    &:last-of-type {
+                         border-right:0;
+                    }
+                    >a {
+                        >img {
+                            width: 160px;
+                        }
+                    }
+                   >p {
+                       height: 16px;
+                       width: 100%;
+                       &:last-of-type {
+                           color: #FF6700;
+                       }
+                   }
+                }
+            }
+        }
+}
+
+#main {
+    height: 460px;
+    position: relative;
+    /*轮播图*/
+    .slideshow {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        >ul {
+            width: 100%;
+            >li {
+                float: left;
+                display: none;
+                &:first-of-type{
+                    display: block;
+                }
+            }
+        }
+        >span {
+            display: inline-block;
+            width: 39px;
+            height: 69px;
+            line-height: 69px;
+            color: #ECF0F1;
+            text-align: center;
+            font-size: 32px;
+            position: absolute;            
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            &:first-of-type {
+               left: 235px;
+            }
+            &:last-of-type {
+               right: 0px;
+            }
+            &:hover {
+                background-color: rgba(171, 171, 171, .5);
+            }
+        }
+    }
+    // 左边侧边栏
+    .sidebar {
+       width: 235px;
+       height: 460px;
+       background-color: rgba(0, 0, 0,.3);
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       padding-top: 20px;
+       padding-bottom: 20px;
+       >ul {
+            width: 100%;
+            height: 100%;
+           >li {              
+               height: 42px;
+               line-height: 42px;
+               width: 100%;
+               font-size: 14px;
+               text-align: center;
+               color: #fff;
+               cursor: pointer;
+               &:hover {
+                   background-color: #ff6700;
+               }
+           }
+       }
+    }
+    // 左边侧栏的右边拉框
+    .right_frame {
+        display: flex;
+        flex-direction: column;
+        height: 460px;
+        position: absolute;
+        left: 235px;
+        top: 0;
+        flex-wrap: wrap;
+        align-items: space-around;
+        background-color: #fff;        
+        // display: none;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 10px #ccc;
+        >div {
+            background-color: #fff;
+            width: 265px;
+            // height: 76px;
+            line-height: 70px;
+             position: relative;
+            >a {
+                margin-left: 20px;
+                >span.buy{
+                    display: inline-block;
+                    width: 57px;
+                    height: 22px;
+                    line-height: 22px;
+                    text-align: center;
+                    border: 1px solid #ff6700;
+                    color: #ff6700;
+                    position: absolute;
+                    right: 20px;
+                    top: 26px;
+                }
+            }
+        }
+    }
+}
+// 热销产品
+#hotSale {
+    margin-top: 14px;
+    margin-bottom: 26px;
+    >ul {
+        >li {
+            float: left;
+            width: 316px;
+            height: 170px;
+            margin-right: 14px;
+            &:nth-child(n+2):hover {
+                box-shadow: 5px 5px 10px #ccc;
+            }
+            &:first-of-type {
+                width: 235px;
+                height: 170px;
+                line-height: 170px;
+                background-color: #5f5750;
+                padding: 13px 11px;
+                position: relative;
+                >ul {
+                    >li {
+                        float: left;
+                        height: 75px;
+                        line-height: 75px;
+                        width: 33.33%;
+                        color: #cfcdcb;
+                        text-align: center;
+                        box-sizing: border-box;
+                        border: 1px solid #6f6862;
+                        cursor: pointer;
+                        &:hover {
+                            color: #fff;
+                        }
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3){
+                            border-top: 0;
+                        }
+                        &:nth-child(4),
+                        &:nth-child(5),
+                        &:nth-child(6){
+                            border-bottom: 0;
+                        }
+                        &:nth-child(1),
+                        &:nth-child(4){
+                            border-left: 0;
+                        }
+                        &:nth-child(3),
+                        &:nth-child(6){
+                            border-right: 0;
+                        }
+                        >i {
+                            display: block;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 20px;
+                            margin-top: 10px;
+                            margin-bottom: 13px;
+                        }
+                        >p {
+                            height: 14px;
+                            line-height: 14px;
+                            font-size: 12px;
+                        }
+                    }
+                    &::before,
+                    &::after {
+                        content:"";
+                        width: 16px;
+                        height: 23px;
+                        display: block;
+                        border-radius: 16px;
+                        background-color: #5f5750;
+                        position: absolute;
+                        z-index: 999;
+                        top: 75px;
+                    }
+                    &::before {
+                        left: 73px;
+                    }
+                    &::after {
+                        right: 73px;
+                    }
+                }
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            >img {
+                width: 316px;
+                height: 170px;
+            }
+        }
+    }
+}
+
+// 智能硬件，搭配，配件，周边
+#noopsyche { 
+    width: 100%;    
+    background-color: #f5f5f5;
+    padding-top: 61px;
+    // 智能硬件 
+   >div {
+       .title {
+           line-height: 50px;
+           >h3 {
+               font-size: 22px;
+               font-weight: 800;
+               float: left;
+           }
+            >a {
+                float: right;
+                font-size: 16px;
+                >i {
+                    color: #b0b0b0;
+                }
+                &:hover{
+                    color: #FF6700;
+                    >i{
+                         color: #FF6700;
+                    }
+                }
+            }
+       }
+        .ninebot_mini {
+            width: 234px;
+            height: 614px;
+            float: left;
+        }
+        .hardware {
+            >ul {
+                >li {
+                    float: left;
+                    width: 234px;
+                    height: 300px;
+                    text-align: center;
+                    background-color: #fff;
+                    margin-left: 14px;
+                    position: relative;
+                    &:hover {
+                        box-shadow: 0px 5px 10px #ccc;
+                    }
+                    &:nth-child(n+5){
+                        margin-top: 14px;
+                    }
+                    &:nth-child(1){
+                        >span {
+                            background-color: #ffac13;
+                        }
+                    }
+                    &:nth-child(2){
+                        >span {
+                            background-color: #83c44e;
+                        }
+                    }
+                    &:nth-child(3){
+                        >span {
+                            background-color: #83c44e;
+                        }
+                    }
+                    &:nth-child(7){
+                        >span {
+                            background-color: #e53935;
+                        }
+                    }
+                    >span {
+                        display: block;
+                        position: absolute;
+                        width: 64px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        // background-color: pink;
+                        color: #fff;
+                        left: 85px;
+                    }
+                    >a {
+                        >img {
+                            width: 160px;
+                            height: 160px;
+                            margin-top: 20px;
+                        }
+                        >p {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            color: #000;
+                        }
+                    }
+                    >p {
+                        margin-top: 10px;
+                        &:first-of-type {
+                            font-size: 12px;
+                        }
+                         &:last-of-type {
+                            font-size: 14px;
+                            color: #ff6734;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 搭配，配件，周边
+    .match {
+      height: 700px; 
+        .match_title {
+            margin-top: 30px;
+            line-height: 60px;
+            >h3 {
+                line-height: 60px;
+                font-size: 22px;
+                font-weight: 800;
+                float: left;
+            }
+            >ul {
+                height: 60px;
+                line-height: 60px;
+                float: right;
+                >li {
+                    font-size: 16px;
+                    float: left;
+                    height: 24px;
+                    line-height: 24px;
+                    margin-left: 30px;
+                    margin-top: 18px;
+                    cursor: pointer;
+                    &.active {
+                        border-bottom: 2px solid #ff6700;
+                        color: #ff6700;
+                    }
+                }
+            }
+        } 
+        .match_left {
+            width: 234px;
+            height: 614px;
+            float: left;
+            >ul {
+                >li {
+                    width: 100%;
+                    height: 300px;
+                    >a {
+                        >img {
+                            width: 100%;
+                            height:300px;
+                        }                        
+                    }
+                    &:first-of-type{
+                            margin-bottom: 14px;
+                        }
+                }
+            }
+        }
+        .match_right {
+            position: relative;
+            >ul {
+                float: right;
+                width: 992px;
+                height: 100%;
+                >li {
+                    float: left;
+                    width: 234px;
+                    height: 300px;
+                    font-size: 12px;
+                    text-align: center;
+                    background-color: #fff;
+                    position: relative;
+                    padding: 34px 0 20px;
+                    margin: 0 0 14px 14px;
+                    overflow: hidden;
+                    &:hover {
+                        box-shadow: 0px 5px 10px #ccc;
+                        >div.bottom {
+                            transition: all 1s;
+                            bottom: 0px;
+                        }
+                    }
+                    >a {
+                        >img {
+                            margin-bottom: 10px;
+                            width: 160px;
+                            height: 160px;
+                        }
+                    }
+                    &:last-of-type{
+                        height: 143px;
+                        padding: 0;
+                        >a {
+                            float: right;
+                            margin-top: 30px;
+                            margin-right: 20px;
+                            >img {
+                                width: 80px;
+                                height: 80px;
+                            }
+                        }
+                        >p {
+                            width: 75px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            position: absolute;
+                            &:first-of-type {
+                                left: 30px;
+                                top: 49px;
+                            }
+                            &:nth-child(3) {
+                                left: 40px;
+                                top: 70px;
+                            }
+                            &:last-of-type{
+                                font-size: 0;
+                            }
+                        }
+                    }                    
+                    >p{
+                        &:first-of-type {
+                            color: #000;
+                            font-size: 14px;
+                        }
+                        &:nth-child(3){
+                            color: #FF6700;
+                            margin: 5px 0 7px;
+                        }
+                    }
+                    >div.bottom{
+                        position: absolute;
+                        background-color: #ff6700;
+                        height: 70px;
+                        width: 100%;
+                        bottom: -80px;
+                        padding: 10px 28px 0;
+                        color: #fff;
+                        font-size: 12px;  
+                        text-align: left;  
+                        // display: none;
+                        >p:last-of-type {
+                            color: #FFBF94;
+                        }
+                    }
+                }
+                .more {
+                    width: 234px;
+                    height: 143px;
+                    background-color: #fff;
+                    position: absolute;
+                    right:0px;
+                    top: 470px;
+                    &:hover {
+                        box-shadow: 0 5px 10px #ccc;
+                    }
+                    >a {
+                        >span {
+                            font-size: 14px;
+                            position: absolute;
+                            &:first-of-type {
+                                top: 49px;
+                                left: 41px;
+                            }
+                            &:last-of-type {
+                                top: 84px;
+                                left: 57px;
+                                color: #ff7d00;
+                            }
+                        }
+                        >i {
+                            font-size: 48px;
+                            display:inline-block;
+                            width: 48px;
+                            height: 48px;
+                            line-height: 48px;
+                            color: #ff6700;;
+                            position: absolute;
+                            top: 37px;
+                            right: 49px;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+
+
+
+}
+
+// 为你推荐
+#recommend {
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 350px;
+    // height: 500px;
+    >div{
+        .head {
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            >h3 {
+                float: left;
+                font-size: 24px;
+                line-height: 24px;
+            }
+            .but {
+                float: right;
+                width: 74px;
+                height: 24px;
+                >span {
+                    display: inline-block;
+                    width: 34px;
+                    height: 23px;
+                    line-height: 23px;
+                    text-align: center;
+                    border: 1px solid #e0e0e0;
+                    color: #e0e0e0;
+                    &:last-of-type {
+                        margin-left: -3px;
+                    }
+                    &.active {
+                        color: #b0b0b0;
+                    }
+                }
+            }
+        }
+        .box_recList {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            >ul {
+                width: 1000%;
+                >li {
+                    float: left;
+                    width: 234px;
+                    height: 300px;
+                    padding-bottom: 3px;
+                    text-align: center;
+                    background-color: #fff;
+                    margin-right: 13px;
+                    &:last-of-type {
+                        margin-right: 0px;
+                    }
+                    &:hover {
+                        transition:all 0.2s;
+                        box-shadow: 0px 10px 10px #b0b0b0;
+                    }
+                    >a {
+                        >img {
+                            margin-top: 30px;
+                            margin-bottom: 20px;
+                        }
+                        >h3 {
+                            font-size: 14px;
+                            height: 16px;
+                            line-height: 16px;
+                            margin-bottom: 10px; 
+                        }
+                        &:hover {
+                            color: #000;
+                            text-decoration: none;
+                        }
+                    }
+                    >p {
+                        font-size: 12px;
+                        height: 26px;
+                        line-height: 26px;
+                        &:first-of-type {
+                            color: #ff6700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 热评产品
+#buzz {
+     width: 100%;
+     padding-top: 10px;
+     height: 485px;
+     background-color: #f5f5f5;
+    >div {
+        >h2{
+            font-size: 20px;
+            height: 60px;
+            line-height: 60px;
+        }
+        >ul {
+            >li {
+                float: left;
+                height: 415px;
+                width: 296px;
+                margin-left: 14px;
+                background-color: #fff;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:hover {
+                    transition: all 0.2s;
+                    box-shadow: 0 5px 10px #b0b0b0;
+                }
+                >a {
+                    >img {
+                        width: 296px;
+                        height: 220px;
+                    }
+                    >p {
+                        margin-top: 30px;
+                        padding:0 20px;
+                        height: 80px;   
+                    }
+                    &:hover {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+                >p {
+                    padding:0 20px;
+                    height: 34px;
+                    line-height: 34px; 
+                    >a {
+                        font-size: 14px;
+                        &:hover {
+                        color: #000;
+                        text-decoration: none;
+                        }
+                    }
+                    >span {
+                        font-size: 14px;
+                        &:first-of-type{
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 内容
+#matter{
+    width: 100%;
+    padding-top: 10px;
+    height: 485px;
+    background-color: #f5f5f5;
+    >div {
+        h2 {
+            font-size:20px;
+            height: 60px;
+            line-height: 60px;
+        }
+       >ul {
+           width: 100%;
+           >li {
+               float: left;
+               width: 296px;
+               height: 421px;
+               background-color: #fff;
+               margin-right: 14px;
+               text-align: center;
+               &:last-of-type {
+                   margin-right: 0px;
+               }
+                >h4 {
+                    font-size: 14px;
+                    margin-top: 47px;
+                    margin-bottom: 10px;
+                }
+                &:nth-child(1){
+                    >h4 {
+                        color: #ffac13;
+                    }
+                }
+                &:nth-child(2){
+                    >h4 {
+                        color: #83c44e;
+                    }
+                }
+                &:nth-child(3){
+                    >h4 {
+                        color: #e55893;
+                    }
+                }
+                &:nth-child(4){
+                    >h4 {
+                        color: #2196f3;
+                    }
+                }
+                .swiper-container { 
+                     width: 100%;
+                     height: 330px;
+                    .swiper-slide{ 
+                        width: 100%;
+                        height: 100%; 
+                        >a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            >h2 {
+                                font-size: 20px;
+                                height: 40px;
+                                line-height: 40px;
+                            }
+                            >p {
+                                font-size: 12px;
+                                line-height: 20px;
+                                text-align: center;
+                            }
+                            >img {
+                                // margin-top: 10px;   
+                                text-align: center;
+                            }                            
+                        }
+                    }
+                    .swiper-pagination-bullet {
+                        opacity: 0.5;
+                        width: 6px;
+                        height: 6px;
+                        margin: 0px 8px;
+                    }
+                    .swiper-pagination-bullet-active {
+                        width: 8px;
+                        height: 8px;
+                         opacity: 1;
+                        border: 2px solid @mianColor;
+                        background-color: #fff;
+                    }
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        background-image:none;
+                        font-size: 15px;
+                        color: #fff;
+                        width: 20px;
+                        height: 48px;
+                        line-height: 48px;
+                        text-align: center;
+                        background-color: rgba(0, 0, 0, .2);
+                        display: none;
+                        &:hover {
+                            background-color: rgba(0, 0, 0, .5);
+                        }
+                    }
+                    .swiper-button-prev{
+                        left:0;
+                    }
+                    .swiper-button-next{
+                        right: 0;
+                    }
+                }
+                &:hover {
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        transition: all 1s;
+                        display: block;
+                    }
+                } 
+           }
+       }
+    }
+}
+// 视频
+#video {
+    width: 100%;
+    padding-top: 10px;
+    height: 413px;
+    background-color: #f5f5f5;
+    >div {
+        height: 100%;
+       .topVideo {
+            >h2 {
+            font-size:20px;
+            height: 60px;
+            line-height: 60px;
+            width: 60px;
+            display: inline-block;
+            }
+            >a {
+                float: right;
+                font-size: 16px;
+                height: 60px;
+                line-height: 60px;
+                >i {
+                    color: #b0b0b0;
+                }
+                &:hover{
+                    color: #FF6700;
+                    >i{
+                            color: #FF6700;
+                    }
+                }
+            }
+       }
+        .video_data {
+            >ul {   
+                >li {
+                    float: left;
+                    width: 296px;
+                    height: 287px;
+                    background-color: #fff;
+                    margin-right: 14px;
+                    position: relative;
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+                    >a {
+                        &:first-of-type{
+                            position: absolute;
+                            left: 15px;
+                            top: 145px;
+                        }
+                        >span {
+                            display: block;
+                            width: 36px;
+                            height: 25px;
+                            line-height: 20px;
+                            text-align: center;
+                            color: #fff;
+                            border: 2px solid #fff;
+                            border-radius: 10px;
+                            background-color: #333;
+                        }
+                        >p {
+                            height: 34px;
+                            width: 100%;
+                            font-size: 14px;
+                            line-height: 34px;
+                            text-align: center;
+                        }
+                    }
+                    >p {
+                        width: 100%;
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}   
+
+@mianColor:#ff6700;
+// 底部
+#footer {
+    height: 450px;
+    .title {
+        ul {
+            width: 100%;
+            height: 75px;
+            border-bottom: 1px solid #ccc;
+            li {
+                float: left;
+                width: 20%;
+                line-height: 75px;
+                text-align: center;
+                cursor: pointer;
+                i {
+                    font-size: 24px;
+                    margin-right: 10px;
+                }
+                s {
+                    font-size: 24px;
+                    float: right;
+                    color: #ddd;
+                }
+                span {
+                    font-size: 16px;
+                }
+                &:hover {
+                    color: @mianColor;
+                }
+            }
+        }
+    }
+    article {
+        padding: 50px 0;
+        ol {
+            float: left;
+            width: 160px;
+            height: 124px;
+            h3 {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+            li {
+                line-height: 25px;
+            }
+            &:last-of-type {
+                border-right: 1px solid #bbb;
+            }
+        }
+        .right {
+            text-align: center;
+            h3 {
+                color: @mianColor;
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            a {
+                display: inline-block;
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin-top: 20px;
+                color: @mianColor;
+                border: 1px solid @mianColor;
+                &:hover {
+                    background-color: @mianColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .bottom {
+        // background-color: #f5f5f5;
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+        ol {
+            float: left;
+            width: 757px;
+            li {
+                float: left;
+            }
+            s {
+                float: left;
+                margin: 0 5px;
+            }
+        }
+        p {
+            margin-top: 5px;
+            float: left;
+            width: 757px;
+            text-align: left;
+            color: #b0b0b0;
+            >a {
+              color: #b0b0b0; 
+              &:hover {
+                color: @mianColor;
+              }
+            }
+        }
+        ul {
+            margin-top: -35px;
+             float: right;
+            li {
+                float: left;
+                &:first-of-type {
+                    margin-left: 33px;
+                }
+                img {
+                    width: 82px;
+                    height: 27px;
+                }
+            }
+        }
+    }
+    p {
+        margin-top: 30px;
+        text-align: center;
+        color: #666;
+    }
+}

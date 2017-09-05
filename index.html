@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="font_svbzaelgnom6ajor/iconfont.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" class="icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- <link rel="stylesheet/less" href="less/base.less"> -->
+    <!-- <link rel="stylesheet/less" href="less/index.less"> -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <script src="lib/less.js"></script> -->
+</head>
+
+<body>
+    <!--顶部通栏  -->
+    <div class="topBanner" id="topBanner">
+        <div class="w">
+            <ul>
+                <li><a href="javascript:;">小米商城</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">MIUI</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">米聊</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">游戏</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">多看阅读</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">云服务</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">小米网移动版</a></li>
+                <li><a href="javascript:;">问题反馈</a></li>
+                <li>|</li>
+                <li><a href="javascript:;">Select Reglon</a></li>
+            </ul>
+            <ul>
+                <li class="shopping">
+                    <a href="javascript:;"><i class="iconfont">&#xe608;</i> 购物车 (0)</a>
+                    <div class="shopping_list">
+                        购物车中还没有商品，赶快选购吧！
+                    </div>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="javascript:;">登录</a></li>
+                        <li>|</li>
+                        <li><a href="javascript:;">注册</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!--导航栏  -->
+    <div class="nav" id="nav">
+        <div class="w">
+            <div class="log">
+                <a href="javascript:;"><img src="./images/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="./images/win.gif" alt=""></a>
+            </div>
+            <div class="navs">
+                <ul class="navTemplate">
+                    <!--导航栏  -->
+                    <script type="text/html" id="navTemplate">
+                        {{each}}
+                        <li type="{{$value.type}}"><a href="javascript:;">{{$value.name}}</a>
+                            <ul class="menus">
+
+                            </ul>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <!--搜索输入框  -->
+            <div class="Search clearfix">
+                <input type="text">
+                <i class="iconfont">&#xe60b;</i>
+                <ul>
+                    <li>红米pro</li>
+                    <li>小米笔记本air</li>
+                </ul>
+            </div>
+        </div>
+        <!--导航下拉菜单  -->
+        <div class="navDown">
+            <ul>
+                <script type="text/html" id="downTemplate">
+                    <li>
+                        <a href="{{sourcePath}}">
+                            <img src="{{imgUrl}}" alt="">                            
+                        </a>
+                        <p>{{name}}</p>
+                        <p>{{price}}</p>
+                    </li>
+                </script>
+            </ul>
+        </div>
+    </div>
+    <!--主体部份  -->
+    <main id="main" class="w">
+        <div class="slideshow">
+            <!--轮播图  -->
+            <ul>
+                <script type="text/html" id="slideTemplate">
+                    <li>
+                        <a href="{{sourceUrl}}">
+                       <img src="{{imgUrl}}" alt="">
+                   </a>
+                    </li>
+                </script>
+            </ul>
+            <span class="btn_left">&lt;</span>
+            <span class="btn_right">&gt;</span>
+        </div>
+        <!--左边侧边栏  -->
+        <div class="sidebar">
+            <ul>
+                <script type="text/html" id="barTemplate">
+                    <li type="{{type}}">{{content}}</li>
+                </script>
+            </ul>
+        </div>
+        <!--左边侧栏的右边导航  -->
+        <div class="right_frame">
+            <script type="text/html" id="frameTemplate1">
+                <div class="listBox">
+                    <a href="{{sourceUrl}}">
+                        <img src="{{imgUrl}}" alt="">
+                        <span>{{name}}</span>
+                        <span class="buy">购买</span>
+                    </a>
+                </div>
+            </script>
+            <script type="text/html" id="frameTemplate2">
+                <div class="listBox">
+                    <a href="{{sourceUrl}}">
+                        <img src="{{imgUrl}}" alt="">
+                        <span>{{name}}</span>
+                    </a>
+                </div>
+            </script>
+        </div>
+    </main>
+    <!--热销产品  -->
+    <section id="hotSale" class="w clearfix">
+        <ul>
+            <li>
+                <ul>
+                    <li>
+                        <i class="iconfont">&#xe627;</i>
+                        <p>选购手机</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe657;</i>
+                        <p>企业团购</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe9bd;</i>
+                        <p>官翻产品</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe672;</i>
+                        <p>小米移动</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe641;</i>
+                        <p>以旧换新</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe60d;</i>
+                        <p>话费充值</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/homeHero-01.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/homeHero-02.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/homeHero-03.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    <!--智能硬件，搭配，配件，周边  -->
+    <section id="noopsyche">
+        <!--智能硬件  -->
+        <div class="w">
+            <div class="title clearfix">
+                <h3>智能硬件</h3>
+                <a href="javascript:;">查看更多
+                    <i class="iconfont">&#xe616;</i>
+                </a>
+            </div>
+            <div class="ninebot_mini">
+                <img src="images/hardware.jpg" alt="">
+            </div>
+            <div class="hardware clearfix">
+                <ul>
+                    <script type="text/html" id="hardwareTemplate1">
+                        <li>
+                            <span>{{discount}}</span>
+                            <a href="{{sourceUrl}}">
+                                <img src="{{imgUrl}}" alt="">
+                                <p>{{title}}</p>
+                            </a>
+                            <p>{{desc}}</p>
+                            <p>{{price}}元</p>
+                        </li>
+                    </script>
+                    <script type="text/html" id="hardwareTemplate2">
+                        <li>
+                            <a href="{{sourceUrl}}">
+                                <img src="{{imgUrl}}" alt="">
+                                <p>{{title}}</p>
+                            </a>
+                            <p>{{desc}}</p>
+                            <p>{{price}}元</p>
+                        </li>
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <!--搭配  -->
+        <div class="match w">
+            <div class="match_title mat_ti clearfix">
+                <script type="text/html" id="matchTemplate">
+                    <h3>{{topTitleName}}</h3>
+                    <ul>
+                        {{each subs}}
+                        <li key="{{$value.key}}">{{$value.name}}</li>
+                        {{/each}}
+                    </ul>
+                </script>
+            </div>
+            <div class="match_left mat_le">
+                <script type="text/html" id="leftGoods">
+                    <ul>
+                        {{each leftGoods}}
+                        <li>
+                            <a href="{{$value.sourceUrl}}">
+                                <img src="{{$value.imgUrl}}" alt="">
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </script>
+            </div>
+            <div class="match_right mat_ri">
+                <ul>
+                    <script type="text/html" id="hotgoods1">
+                        <li>
+                            <a href="{{sourceUrl}}">
+                                <img src="{{imgUrl}}" alt="">                                
+                            </a>
+                            <p>{{title}}</p>
+                            <p>{{price}}元</p>
+                            <p>{{heat}}人评价</p>
+                            <div class="bottom">
+                                <p>{{reviewDesc}}</p>
+                                <p>来自{{reviewAuthor}}的评价</p>
+                            </div>
+                        </li>
+                    </script>
+                    <script type="text/html" id="hotgoods2">
+                        <li>
+                            <a href="{{sourceUrl}}">
+                                <img src="{{imgUrl}}" alt="">
+                            </a>
+                            <p>{{title}}</p>
+                            <p>{{price}}元</p>
+                            <p>{{heat}}人评价</p>
+                        </li>
+                        <div class="more">
+                            <a href="javascript:;">
+                                <span>浏览更多</span>
+                                <i class="iconfont">&#xe616;</i>
+                                <span>热门</span>                        
+                            </a>
+                        </div>
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <!--配件  -->
+        <div class="match w">
+            <div class="match_title parts_ti clearfix">
+
+            </div>
+            <div class="match_left parts_le">
+
+            </div>
+            <div class="match_right parts_ri">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+        <!--周边  -->
+        <div class="match w">
+            <div class="match_title rim_ti clearfix">
+
+            </div>
+            <div class="match_left rim_le">
+
+            </div>
+            <div class="match_right rim_ri">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--为你推荐  -->
+    <section id="recommend">
+        <div class="w">
+            <div class="head">
+                <h3>为你推荐</h3>
+                <div class="but">
+                    <span class="le_but glyphicon glyphicon-chevron-left"></span>
+                    <span class="ri_but glyphicon glyphicon-chevron-right active"></span>
+                </div>
+            </div>
+            <div class="box_recList">
+                <ul class="recList">
+                    <script type="text/html" id="listTemplate">
+                        {{each}}
+                        <li>
+                            <a href="{{$value.sourceUrl}}">
+                            <img src="{{$value.imgUrl}}" alt="">
+                            <h3>{{$value.name}}</h3>
+                        </a>
+                            <p>{{$value.price}}元</p>
+                            <p>{{$value.price}}好评</p>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--热评产品  -->
+    <section id="buzz">
+        <div class="w">
+            <h2>热评产品</h2>
+            <ul class="bulist">
+                <script type="text/html" id="buzz_Template">
+                    {{each}}
+                    <li>
+                        <a href="{{$value.sourceUrl}}">
+                            <img src="{{$value.imageUrl}}" alt="">
+                            <p>{{$value.review}}</p>
+                        </a>
+                        <p>来自于 {{$value.author}} 的评价</p>
+                        <p>
+                            <a href="{{$value.sourceUrl}}"><span>{{$value.name}}</span></a>
+                            <span>|</span>
+                            <span>{{$value.price}}元</span>
+                        </p>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+    </section>
+    <!--内容  -->
+    <section id="matter">
+        <div class="w">
+            <h2>内容</h2>
+            <ul class="matlist">
+                <script type="text/html" id="matTem">
+                    {{each contents}}
+                    <li class="matter_tilt">
+                        <h4>{{$value.title}}</h4>
+                        <div class="swmaTi" type="{{$value.type}}">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    {{each $value.list}}
+                                    <div class="swiper-slide">
+                                        <a href="{{$value.sourceUrl}}">
+                                            {{if $value.title!=''}}
+                                            <h2>{{$value.title}}</h2>
+                                            {{/if}}
+                                            <p>{{$value.desc}}</p>
+                                            <p>{{$value.desc1}}</p>
+                                            <p>{{$value.desc2}}</p>
+                                            <p>{{$value.btnTxt}}</p>
+                                            {{if $value.price!=''}}
+                                            <p class="price">{{$value.price}}</p>
+                                            {{/if}}
+                                            <img src="{{$value.imgUrl}}" alt="">
+                                            
+                                        </a>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                                <!-- 如果需要分页器 -->
+                                <div class="swiper-pagination"></div>
+                                <!-- 如果需要导航按钮 -->
+                                <div class="swiper-button-prev glyphicon glyphicon-chevron-left"></div>
+                                <div class="swiper-button-next glyphicon glyphicon-chevron-right"></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <!--视频  -->
+    <section id="video">
+        <div class="w">
+            <div class="topVideo ">
+                <h2>视频</h2>
+                <a href="javascript:;">查看更多
+                    <i class="iconfont">&#xe616;</i>
+                </a>
+            </div>
+            <div class="video_data">
+                <ul class="video_list">
+                    <script type="text/html" id="videpTemplate">
+                        {{each}}
+                        <li>
+                            <img src="{{$value.imgUrl}}" alt="">
+                            <a href="{{$value.videoUrl}}"><span class="glyphicon glyphicon-play"></span></a>
+                            <a href="{{$value.videoUrl}}">
+                                <p>{{$value.videotitle}}</p>
+                            </a>
+                            <p>{{$value.desc}}</p>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--底部  -->
+    <footer class="w clearfix" id='footer'>
+        <aside class="title">
+            <ul>
+                <li>
+                    <i class="icon iconfont icon-paimai"></i>
+                    <span>1小时快修服务</span>
+                    <s>|</s>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-tuihuo"></i>
+                    <span>7天无理由退货</span>
+                    <s>|</s>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-zuobiao"></i>
+                    <span>15天免费换货</span>
+                    <s>|</s>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-liwu"></i>
+                    <span>满150元包邮</span>
+                    <s>|</s>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-paimai"></i>
+                    <span>520余家售后网点</span>
+                </li>
+            </ul>
+        </aside>
+        <article class="clearfix">
+            <ol>
+                <h3>帮助中心</h3>
+                <li>账户管理</li>
+                <li>购物指南</li>
+                <li>订单操作</li>
+            </ol>
+            <ol>
+                <h3>服务支持</h3>
+                <li>售后政策</li>
+                <li>自助服务</li>
+                <li>相关下载</li>
+            </ol>
+            <ol>
+                <h3>线下门店</h3>
+                <li>小米之家</li>
+                <li>服务网点</li>
+                <li>零售网点</li>
+            </ol>
+            <ol>
+                <h3>关于小米</h3>
+                <li>了解小米</li>
+                <li>加入小米 </li>
+                <li>联系我们</li>
+            </ol>
+            <ol>
+                <h3>关注我们</h3>
+                <li>新浪微博</li>
+                <li>小米部落</li>
+                <li>官方微信</li>
+            </ol>
+            <ol>
+                <h3>特色服务</h3>
+                <li>F 码通道</li>
+                <li>礼物码</li>
+                <li>防伪查询</li>
+            </ol>
+            <div class="right">
+                <h3>400-100-5678</h3>
+                <p>
+                    周一至周日 8:00-18:00 （仅收市话费）
+                </p>
+                <a href="">24小时在线客服</a>
+            </div>
+        </article>
+        <aside class="bottom clearfix">
+            <img src="./images/logo.png" alt="">
+            <ol>
+                <li>小米商城</li>
+                <s>|</s>
+                <li>米聊</li>
+                <s>|</s>
+                <li>多看书城</li>
+                <s>|</s>
+                <li>小米路由器</li>
+                <s>|</s>
+                <li>视频电话</li>
+                <s>|</s>
+                <li>小米天猫店</li>
+                <s>|</s>
+                <li>小米淘宝直营店</li>
+                <s>|</s>
+                <li>小米网盟</li>
+                <s>|</s>
+                <li>小米移动</li>
+                <s>|</s>
+                <li>隐私政策</li>
+                <s>|</s>
+                <li>Select Region</li>
+            </ol>
+            <p>©<a href="javascript:;">mi.com</a>京ICP证110507号 <a href="javascript:;">京ICP备10046444号</a> <a href="javascript:;">京公网安备11010802020134号</a>                <a href="javascript:;">京网文[2014]0059-0009号</a></p>
+            <p>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+            <ul>
+                <li><img src="./images/truste.png" alt=""></li>
+                <li><img src="./images/v-logo-1.png" alt=""></li>
+                <li><img src="./images/v-logo-2.png" alt=""></li>
+                <li><img src="./images/v-logo-3.png" alt=""></li>
+            </ul>
+        </aside>
+        <p><img src="./images/slogan2016.png" alt=""></p>
+    </footer>
+</body>
+
+</html>
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/swiper/js/swiper.min.js"></script>
+<script src="js/index.js"></script>
+<script src="lib/template.js"></script>
